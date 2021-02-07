@@ -1,15 +1,4 @@
-﻿
-Setup:
-
-	TK
-
-
-
-
-
-
-
-Assessement Notes:
+﻿Assessement Notes:
 
 	C# .NET Web Developer coding assessment V2
 

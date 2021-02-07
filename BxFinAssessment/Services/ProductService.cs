@@ -12,7 +12,7 @@ namespace BxFinAssessment.Services
 
             while (x < y)
             {
-                var tmp = productIds[y];
+                var tmp = productIds[x];
                 productIds[x] = productIds[y];
                 productIds[y] = tmp;
                 x++;
