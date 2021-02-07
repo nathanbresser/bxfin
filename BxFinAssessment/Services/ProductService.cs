@@ -5,7 +5,7 @@ namespace BxFinAssessment.Services
     public class ProductService : IProductService
     {
 
-        public async Task<int[]> ReverseProductIds(int[] productIds)
+        public Task<int[]> ReverseProductIds(int[] productIds)
         {
             int x = 0;
             int y = productIds.Length - 1;
@@ -18,23 +18,23 @@ namespace BxFinAssessment.Services
                 x++;
                 y--;
             }
-            return productIds;
+            return Task.FromResult(productIds);
         }
 
-        public async Task<int[]> DeleteProduct(int position, int[] productIds)
+        public Task<int[]> DeleteProduct(int position, int[] productIds)
         {
-            int[] newProductIds = new int[(productIds.Length)-1];
-            int newIndex = 0;
+            int[] updatedProductIds = new int[(productIds.Length)-1];
+            int updatedIndex = 0;
 
             for (int i = 0; i < productIds.Length; i++)
             {
                 if (i < position-1 || i > position-1)
                 {
-                    newProductIds[newIndex] = productIds[i];
-                    newIndex++;
+                    updatedProductIds[updatedIndex] = productIds[i];
+                    updatedIndex++;
                 }
             }
-            return newProductIds;
+            return Task.FromResult(updatedProductIds);
         }
     }
 }
