@@ -6,7 +6,7 @@ namespace BxFinAssessment.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class ArrayCalcController
+    public class ArrayCalcController : Controller
     {
         private readonly IProductService _productService;
 
@@ -14,6 +14,12 @@ namespace BxFinAssessment.Controllers
             IProductService productService)
         {
             _productService = productService;
+        }
+
+        [HttpGet]
+        public IActionResult EmptyRequest()
+        {
+            return Ok("BxFin Assessment - ArrayCalc");
         }
 
         [HttpGet]
