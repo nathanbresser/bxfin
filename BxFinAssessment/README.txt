@@ -1,4 +1,11 @@
-﻿Assessement Notes:
+﻿# ArrayCalcAPI
+
+- Asp.NET Core 2.2
+
+- Visual Studio 2017 compatible
+
+
+# Origial Notes
 
 	C# .NET Web Developer coding assessment V2
 
